@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Olympic Trivia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+
+<body>
+    <!-- Intro Section -->
+    <div class="intro" id="intro">
+        <h1>Olympic Trivia</h1>
+        <h2>How much do you know about the Olympics?</h2>
+        <span class = "score">Your Score: 0</span>
+        <button id="start-btn" class = "start">Let's get started!</button>
+    </div>
+
+
+
+    <!-- Questions (initially hidden) -->
+    <div class="question" id="question1">
+        <h2>Question 1: Who is the father of the modern Olympic Games?</h2>
+        <div>
+            <button id = "blue" class="correct">Pierre de Coubertin</button>
+            <button id = "black" class="option">Elon Musk</button>
+            <button id = "red" class="option">Arnold S. Bach</button>
+        </div>
+        <div>
+            <button id = "green" class="option">Ryan Saavedra</button>
+            <button id = "yellow" class="option">Elliot T. Bach</button>
+        </div>
+        <p class = "correctex">
+            That's correct! Pierre de Coubertin is refered to as the father of the modern Olympic Games!</p>
+        <p class = "incorrectex">
+            That's incorrect! Pierre de Coubertin is refered to as the father of the modern Olympic Games!</p>
+    </div>
+
+
+
+    <div class="question" id="question2">
+        <h2>Question 2: Where were the first modern Olympic Games held?</h2>
+        <div>
+            <button id = "blue" class="option">Atlanta</button>
+            <button id = "black" class="option">Moscow</button>
+            <button id = "red" class="option">Salt Lake City</button>
+        </div>
+        <div>
+            <button id = "green" class="correct">Athens</button>
+            <button id = "yellow" class="option">Tokyo</button>
+        </div>
+        <p class = "correctex">
+            That's correct! Athens was the first city to host the modern Olympic Games</p>
+        <p class = "incorrectex">
+            That's incorrect! Athens was the first city to host the modern Olympic Games</p>
+    </div>
+
+
+
+
+    <div class="question" id="question3">
+        <h2>Question 3: Which year were the Olympic Games NOT canceled?</h2>
+        <div>
+            <button id = "blue" class="option">1940</button>
+            <button id = "black" class="option">1916</button>
+            <button id = "red" class="correct">2020</button>
+        </div>
+        <div>
+            <button id = "green" class="option">1944</button>
+            <button id = "yellow" class="option">1999</button>
+        </div>
+        <p class = "correctex">
+            That's correct! The 2020 Olympic Games were postponed to 2021, not canceled!</p>
+        <p class = "incorrectex">
+            That's incorrect! The 2020 Olympic Games were postponed to 2021, not canceled!</p>
+    </div>
+
+
+
+
+
+    <div class="question" id="question4">
+        <h2>Question 4: Which sport has Team USA never medaled in?</h2>
+        <div>
+            <button id = "blue" class="option">Fencing</button>
+            <button id = "black" class="option">Athletics</button>
+            <button id = "red" class="option">Women's Basketball</button>
+        </div>
+        <div>
+            <button id = "green" class="correct">Rhythmic Gymnastics</button>
+            <button id = "yellow" class="option">Synchronized Swimming</button>
+        </div>
+        <p class = "correctex">
+            That's correct! The United States has never medaled in rhythmic gymnastics.</p>
+        <p class = "incorrectex">
+            That's incorrect! The United States has never medaled in rhythmic gymnastics.</p>
+    </div>
+
+
+
+    <div class="question" id="question5">
+        <h2>Question 5: What do the Olympic Rings symbolize?</h2>
+        <div>
+            <button id = "blue" class="option">The continents</button>
+            <button id = "black" class="correct">All of these!</button>
+            <button id = "red" class="option">Nationalities</button>
+        </div>
+        <div>
+            <button id = "green" class="option">Flag colors</button>
+            <button id = "yellow" class="option">Overall Unity</button>
+        </div>
+        <p class = "correctex">
+            That's correct! The Olympic rings symbolize the continents, the colors of all the 
+            flags in the world, their nations, and overall respect and unity of the world.</p>
+        <p class = "incorrectex">
+            That's incorrect! The Olympic Rings are a symbol of all the options above!</p>
+    </div>
+
+    <div id = "finish">Quiz Complete! Your score is 5.</div>
+
+
+</body>
+</html>

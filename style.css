@@ -1,0 +1,109 @@
+
+body{
+    background-color: rgb(200, 248, 255);
+    text-align: center;
+    padding-top: 200px; 
+}
+
+.score {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background: #f0f0f0; /* Optional: add background for better visibility */
+    padding: 10px; /* Optional: add padding for better appearance */
+    border: 1px solid #ccc; /* Optional: add a border for better visibility */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.intro {
+    position: fixed; /* Keep it fixed at the top of the page */
+    top: 0; /* Align it at the top */
+    left: 0; /* Align it to the left of the page */
+    width: 100%; /* Scale to the full width of the webpage */
+    background-color: white; /* Background color */
+    text-align: center; /* Center the text horizontally */
+    padding: 20px 0; /* Add vertical padding for space around the content */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-sizing: border-box; /* Make sure padding doesn’t increase the width */
+}
+
+/*.intro h1 {
+    font-size: 2em; Scale the font size as needed 
+    margin: 0; Remove any default margin 
+}*/
+
+
+div{
+    margin: 1px;
+    /*outline: 2px red solid;*/
+}
+
+.correctex{
+    display:none;
+}
+
+.incorrectex{
+    display:none;
+}
+
+#start-btn{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+#finish{
+    display:none;
+}
+
+
+#blue{
+    border: 10px solid blue;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#black{
+    border: 10px solid black;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#red{
+    border: 10px solid red;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#yellow{
+    border: 10px solid yellow;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#green{
+    border: 10px solid green;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
