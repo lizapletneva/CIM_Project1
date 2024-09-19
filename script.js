@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
     let buttons = document.querySelectorAll("button.option, button.correct"); // Select all answer buttons
     let scoreElement = document.querySelector(".score");
@@ -8,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let nextBtn = document.createElement("button"); // Create the next button dynamically
     nextBtn.textContent = "Next"; // Set button text
     nextBtn.id = "next-btn"; // Set an ID for the next button
-    //learnBtn.id = "learn-btn";
     let score = 0;
     let currentQuestionIndex = 0; // Track which question is being shown
 
@@ -21,12 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(nextBtn); // Add the next button to the document
     }
 
-
-
-
-
     // Show the next question
     function nextQuestion() {
+        questions[currentQuestionIndex].style.display = "none"; // Hide the current question
         nextBtn.style.display = "none"; // Hide the "Next" button after it's clicked
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++; // Move to the next question
@@ -38,20 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.disabled = false;
                 button.style.background = ""; // Reset to default
                 button.style.color = ''; // Reset to default
+                button.classList.remove("no-transform"); // Remove class to enable hover effect and cursor
             }
         } else {
-            alert("Quiz completed! Your score is: " + score);
+            // Quiz complete
+            document.querySelector("#finish").style.display = "block"; // Show the completion message
+            nextBtn.style.display = "none"; // Hide the next button
         }
     }
-
-
-
-
 
     // Check the answer when the button is clicked
     function check(event) {
         let button = event.target; // Find the clicked button
-        let question = button.closest(".question"); // Find current question
+        let question = button.closest(".question"); // Find the current question
         let name = button.className; // Get class name of the button
 
         // Display either correct or wrong for the selected button
@@ -74,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let button of questionButtons) {
             button.disabled = true;
             button.style.color = 'white';
+            button.classList.add("no-transform"); // Add class to disable transform effect and cursor
         }
         
         // Show the "Next" button to move to the next question
