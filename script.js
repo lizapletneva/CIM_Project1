@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } else {
             // Quiz complete
-            document.querySelector("#finish").style.display = "block"; // Show the completion message
+            finishMessage.textContent = `Quiz Complete! Your score is ${score}.`; // Display the actual score
+            finishMessage.style.display = "block"; // Show the completion message
             nextBtn.style.display = "none"; // Hide the next button
         }
     }
