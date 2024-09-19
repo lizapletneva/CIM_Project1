@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let questions = document.querySelectorAll(".question"); // Get all question divs
     let startBtn = document.getElementById("start-btn"); // Get the start button
     let nextBtn = document.createElement("button"); // Create the next button dynamically
+    let olympicIMG = document.getElementById("olympic-image");
     nextBtn.textContent = "Next"; // Set button text
     nextBtn.id = "next-btn"; // Set an ID for the next button
     let score = 0;
@@ -77,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show the first question when the start button is clicked
     startBtn.addEventListener("click", () => {
         startBtn.style.display = "none"; // Hide the start button
+        olympicIMG.style.display = "none"; //FIX
         questions[0].style.display = "block"; // Show the first question
     });
 
