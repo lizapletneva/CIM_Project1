@@ -10,16 +10,16 @@ body {
 }
 
 h1{
-    font-size: 300%;
+    font-size: 100%;
     font-family: 'Times New Roman', Times, serif;
 }
 
 h2{
-    font-size: 40px;
+    font-size: 75%;
 }
 
 h3{
-    font-size: 35px;
+    font-size: 50%;
 }
 
 .intro {
