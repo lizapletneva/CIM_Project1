@@ -112,22 +112,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
     // Show additional information when "Learn More" is clicked
-    function learnMore(event) {
-        let question = event.target.closest(".question");
-        let learnMoreText = question.querySelector(".learn-more");
-        learnMoreText.style.display = (learnMoreText.style.display === "none" || learnMoreText.style.display === "") ? "block" : "none";
+function learnMore(event) {
+    let question = event.target.closest(".question");
+    let learnMoreText = question.querySelector(".learn-more");
+    
+    // Toggle the display of the "Learn More" text
+    learnMoreText.style.display = (learnMoreText.style.display === "none" || learnMoreText.style.display === "") ? "block" : "none";
+    
+    // Hide both "Learn More" and "Next" buttons initially
+    learnMoreButtons[currentQuestionIndex].style.display = "none";
+    nextButtons[currentQuestionIndex].style.display = "none";
 
-        event.target.style.display = "none";
-
-        // Show the "Next" button again
+    // Once the "Learn More" text is shown, move the "Next" button to appear right after the "Learn More" text
+    if (learnMoreText.style.display === "block") {
+        // Move the "Next" button right after the "Learn More" text in the DOM
+        learnMoreText.parentNode.insertBefore(nextButtons[currentQuestionIndex], learnMoreText.nextSibling);
+        
+        // Re-show the "Next" button after the "Learn More" text
         nextButtons[currentQuestionIndex].style.display = "inline-block";
+        nextButtons[currentQuestionIndex].style.marginTop = "10px"; // Add a small margin for spacing
     }
+}
+
+
 
 
 
