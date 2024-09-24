@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- Intro Section: fixed at the top of the page -->
+    <!-- Intro Section: -->
     <div class="intro" id="intro">
         <h1>Time to Test Your Olympic Knowledge</h1>
         <h3>Score: <span class="score">0</span></h3>
@@ -104,9 +104,6 @@
     </div>
 
 
-
-
-
     <!-- Question 3 -->
     <div class="question" id="question3">
         <h2>Which year were the Olympic Games NOT canceled?</h2>
@@ -135,9 +132,6 @@
     </div>
 
 
-
-
-
     <!-- Question 4 -->
     <div class="question" id="question4">
         <h2>Which sport has Team USA never medaled in?</h2>
@@ -154,11 +148,14 @@
         <p class="incorrectex">That's incorrect! The United States has never medaled in rhythmic gymnastics.</p>
         <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
         <button class="next-btn">Next</button> <!-- Next Button -->
-        <p class="learn-more" style="display:none;">Team USA has participated in rhythmic gymnastics but has not medaled.</p> <!-- Learn More Text -->
+        <p class="learn-more" style="display:none;">Team USA has yet to win a medal in rhythmic gymnastics at the 
+            Olympics, a sport dominated by countries like Russia and Bulgaria. However, the United States has 
+            found success in various other disciplines, notably in athletics, where American athletes have 
+            consistently excelled and garnered numerous medals. Additionally, Team USA has achieved success in 
+            shooting, fencing, and artistic swimming, showcasing their versatility and strength across different 
+            sports. These accomplishments highlight the country’s broader athletic prowess despite the absence of 
+            medals in rhythmic gymnastics.</p> <!-- Learn More Text -->
     </div>
-
-
-
 
 
     <!-- Question 5 -->
@@ -173,21 +170,28 @@
             <button id="green" class="option">Flag colors</button>
             <button id="yellow" class="option">Unity</button>
         </div>
-        <p class="correctex">That's correct! The Olympic rings symbolize the continents, the colors of all the flags in the world, their nations, and overall respect and unity of the world.</p>
-        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
+        <p class="correctex">That's correct! The Olympic rings symbolize the continents, the colors of all 
+            the flags in the world, their nations, and overall respect and unity of the world.</p>
         <p class="incorrectex">That's incorrect! The Olympic Rings are a symbol of all the options above!</p>
+        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
         <button class="next-btn">Next</button> <!-- Next Button -->
-        <p class="learn-more" style="display:none;">The Olympic Rings symbolize the five continents and the unity of the nations.</p> <!-- Learn More Text -->
+        <p class="learn-more" style="display:none;">The Olympic rings, consisting of five interlocking rings 
+            in blue, yellow, black, green, and red on a white background, symbolize the unity of the five 
+            inhabited continents: Africa, the Americas, Asia, Europe, and Oceania. Each color represents the 
+            flag colors of all nations participating in the Games, signifying inclusivity and a shared identity 
+            among diverse cultures. This emblem embodies the spirit of international cooperation and friendship, 
+            promoting the idea that despite differences, athletes and nations come together to celebrate 
+            sportsmanship and human achievement on a global stage.</p> <!-- Learn More Text -->
     </div>
-
-
-
-
 
     <!-- Finish Section -->
-    <div id="finish">
-        <p>Quiz Complete! Your score is <span class="score">0</span>.</p>
+    <div id="finish" style="display: none;">
+        <h2>Quiz Complete!</h2>
+        <h2>Your score is <span class="score">0</span></h2>
+        <!-- Image for result medal -->
+        <img id="medal-image" src="" alt="Result Image" style="display: none;">
     </div>
+
 
 </body>
 </html>

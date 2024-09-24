@@ -5,10 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let scoreElement = document.querySelector(".score");
     let questions = document.querySelectorAll(".question"); // Get all question divs
     let startBtn = document.getElementById("start-btn"); // Get the start button
-
-    //let olympicIMG = document.getElementById("olympic-image");
     let olympicSlider = document.querySelector(".image-slider");
-
     let nextButtons = document.querySelectorAll(".next-btn"); // Select all "Next" buttons
     let learnMoreButtons = document.querySelectorAll(".learn-more-btn"); // Select all "Learn More" buttons
     let score = 0;
@@ -27,11 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
-
-
-
-
       // Show the first question when the start button is clicked
     startBtn.addEventListener("click", () => {
         startBtn.style.display = "none"; // Hide the start button
@@ -39,11 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".image-container").style.display = "none"; // Hide the image slider
         questions[0].style.display = "block"; // Show the first question
     });
-
-
-
-
-
 
 
     // Show the next question
@@ -69,12 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
            finishQuiz();
         }
     }
-
-
-
-
-
-
 
     // Check the answer when the button is clicked
     function check(event) {
@@ -111,36 +92,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
     // Show additional information when "Learn More" is clicked
-function learnMore(event) {
-    let question = event.target.closest(".question");
-    let learnMoreText = question.querySelector(".learn-more");
+    function learnMore(event) {
+        let question = event.target.closest(".question");
+        let learnMoreText = question.querySelector(".learn-more");
+        learnMoreText.style.display = (learnMoreText.style.display === "none" || learnMoreText.style.display === "") ? "block" : "none";
     
-    // Toggle the display of the "Learn More" text
-    learnMoreText.style.display = (learnMoreText.style.display === "none" || learnMoreText.style.display === "") ? "block" : "none";
-    
-    // Hide both "Learn More" and "Next" buttons initially
-    learnMoreButtons[currentQuestionIndex].style.display = "none";
-    nextButtons[currentQuestionIndex].style.display = "none";
+        // Hide both "Learn More" and "Next" buttons initially
+        learnMoreButtons[currentQuestionIndex].style.display = "none";
+        nextButtons[currentQuestionIndex].style.display = "none";
 
-    // Once the "Learn More" text is shown, move the "Next" button to appear right after the "Learn More" text
-    if (learnMoreText.style.display === "block") {
-        // Move the "Next" button right after the "Learn More" text in the DOM
-        learnMoreText.parentNode.insertBefore(nextButtons[currentQuestionIndex], learnMoreText.nextSibling);
-        
-        // Re-show the "Next" button after the "Learn More" text
-        nextButtons[currentQuestionIndex].style.display = "inline-block";
-        nextButtons[currentQuestionIndex].style.marginTop = "10px"; // Add a small margin for spacing
+        // Once the "Learn More" text is shown, move the "Next" button to appear right after the "Learn More" text
+        if (learnMoreText.style.display === "block") {
+            // Move the "Next" button right after the "Learn More" text 
+            learnMoreText.parentNode.insertBefore(nextButtons[currentQuestionIndex], learnMoreText.nextSibling);
+            // Re-show the "Next" button after the "Learn More" text
+            nextButtons[currentQuestionIndex].style.display = "inline-block";
+            nextButtons[currentQuestionIndex].style.marginTop = "10px"; // Add a small margin for spacing
+        }
     }
-}
-
-
-
-
-
-
-
 
 
     function finishQuiz() {
@@ -149,14 +119,32 @@ function learnMore(event) {
             questions[i].style.display = "none";
         }
     
-        // Hide the finish message initially
+        // Show the finish section
         let finishMessage = document.getElementById("finish");
         finishMessage.style.display = "block"; // Show the completion message
     
         // Update the score in the finish section
         let finalScoreElement = document.querySelector("#finish .score");
         finalScoreElement.textContent = score;
+    
+        // Select the result image element
+        let resultImage = document.getElementById("medal-image");
+    
+        // Determine the image to display based on the score
+        if (score === 5) {
+           resultImage.src = "oLympicGold.jpg";
+        } else if (score === 4) {
+            resultImage.src = "olympicSilver.jpg";
+        } else if (score === 3) {
+            resultImage.src = "olympicBronze.jpg"; 
+        } else {
+            resultImage.src = "sadEmoji.jpg"; 
+        }
+    
+        // Display the result image
+       resultImage.style.display = "block";
     }
+    
 
     // Attach the check function to each answer button
     for (let button of buttons) {

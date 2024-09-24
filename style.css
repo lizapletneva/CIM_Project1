@@ -9,12 +9,9 @@ body {
     flex-direction: column; 
 }
 
-
 h2{
     font-size: 30px;
 }
-
-
 
 .intro {
     position: fixed; 
@@ -44,37 +41,35 @@ h2{
     font-size: 20%;
 }
 
-
 p{
     font-size: 15%;
 }
 
-
 .image-container {
     margin-top: 11%;
     background-color: rgb(255, 255, 255);
-    display: flex; /* Use flexbox to center contents */
-    justify-content: center; /* Center contents horizontally */
-    align-items: center; /* Center contents vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     overflow: hidden;
-    width: 100%; /* Full width */
-    height: 50%; /* Set a height for the container */
-    position: relative; /* Position relative for absolute child positioning */
+    width: 100%; 
+    height: 50%; 
+    position: relative; 
     outline: 5px solid transparent;
     box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
 }
 
 .image-slider {
     display: flex; 
-    width: 100%; /* Full width times the number of images */
-    animation: slide 35s linear infinite; /* Adjust duration for a smoother transition */
+    width: 100%; 
+    animation: slide 35s linear infinite; 
 }
 
 .image-slider img {
-    width: 25%; /* Each image takes up 10% of the slider */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px; /* Space between images */
-    flex-shrink: 0; /* Prevent shrinking */
+    width: 25%; 
+    height: auto; 
+    margin: 20px; 
+    flex-shrink: 0; 
     outline: 5px solid transparent;
     box-shadow: 0 0 15px 10px rgba(38, 91, 237, 0.8);
 
@@ -86,18 +81,16 @@ p{
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-400%); /* Move the slider left by 100% of its width */
+        transform: translateX(-400%); 
     }
 }
-
-
 
 #start-btn {
     height: 10%;
     width: 20%;
     cursor: pointer;
-    margin: 2%; /* Remove extra margin */
-    display: block; /* Ensure it behaves as a block element */
+    margin: 3%; 
+    display: block; 
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
     font-size: 100%;
@@ -110,8 +103,8 @@ p{
     height: 10%;
     width: 20%;
     cursor: pointer;
-    margin: 15px; /* Remove extra margin */
-    display: block; /* Ensure it behaves as a block element */
+    margin: 15px;
+    display: block; 
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
     border-radius: 50%;
@@ -123,12 +116,12 @@ p{
     outline: 5px solid transparent;
     box-shadow: 0 0 15px 3px  #4CAF50;;
 }
+
 .learn-more-btn{
     border: 5px #FF474C;
     outline: 5px solid transparent;
     box-shadow: 0 0 15px 3px #FF474C;
 }
-
 
 .correctex, .incorrectex, .learn-more {
     display: none;
@@ -138,13 +131,34 @@ p{
     font-size: 30px;
 }
 
-
 #finish {
-    display: none;
-    font-size: 40px;
-    background-color: rgb(190, 190, 255);
+    display: none; 
+    height: 50%; 
+    width: 70%; 
+    font-size: 25%;
+    background-color: white;
     outline: 5px solid black;
-    padding:20px;
+    padding: 20px; 
+    border-color: rgb(38, 91, 237);
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px rgb(38, 91, 237);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    overflow: auto; 
+}
+
+#medal-image {
+    max-width: 90%; 
+    max-height: 80%; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain; 
+    margin: 0; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 #blue, #black, #red, #yellow, #green {
