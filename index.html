@@ -8,127 +8,186 @@
     <script src="script.js" defer></script>
 </head>
 
-
-
 <body>
 
-    <!-- Intro Section -->
+    <!-- Intro Section: fixed at the top of the page -->
     <div class="intro" id="intro">
-        <h1>Olympic Trivia</h1>
-        <h3>How much do you know about the Olympics?</h3>
-        <p>Score: <span class = "score">0</span></p>
+        <h1>Time to Test Your Olympic Knowledge</h1>
+        <h3>Score: <span class="score">0</span></h3>
     </div>
 
-    
+    <!-- Image carousel and Start Button Section -->
+    <div class="image-container">
+        <div class="image-slider">
+            <img src="OI1.jpg" alt="Olympic Image 1">
+            <img src="OI2.jpeg" alt="Olympic Image 2">
+            <img src="OI3.jpg" alt="Olympic Image 3">
+            <img src="OI4.jpg" alt="Olympic Image 4">
+            <img src="OI5.jpg" alt="Olympic Image 5">
+            <img src="OI6.jpg" alt="Olympic Image 6">
+            <img src="OI7.jpg" alt="Olympic Image 7">
+            <img src="OI8.jpg" alt="Olympic Image 8">
+            <img src="OI10.jpg" alt="Olympic Image 10">
+            <img src="OI9.jpg" alt="Olympic Image 9">
+            
 
-    
-   <div class = image-container>
-        <img id="olympic-image" src="olympicRingz.jpg" alt="Olympic Image" class="start-image">
-        <button id="start-btn" class = "start">Let's get started!</button>
-    </div> 
+            <img src="OI1.jpg" alt="Olympic Image 1">
+            <img src="OI2.jpeg" alt="Olympic Image 2">
+            <img src="OI3.jpg" alt="Olympic Image 3">
+            <img src="OI4.jpg" alt="Olympic Image 4">
+            <img src="OI5.jpg" alt="Olympic Image 5">
+            <img src="OI6.jpg" alt="Olympic Image 6">
+            <img src="OI7.jpg" alt="Olympic Image 7">
+            <img src="OI8.jpg" alt="Olympic Image 8">
+            <img src="OI10.jpg" alt="Olympic Image 10">
+            <img src="OI9.jpg" alt="Olympic Image 9">
+        </div>
+    </div>
+    <button id="start-btn" class="start">Let's get started!</button>
 
 
 
-
+    <!-- Question 1 -->
     <div class="question" id="question1">
         <h2>Who is the father of the modern Olympic Games?</h2>
         <div>
-            <button id = "blue" class="correct">Pierre de Coubertin</button>
-            <button id = "black" class="option">Elon Musk</button>
-            <button id = "red" class="option">Arnold S. Bach</button>
+            <button id="blue" class="correct">Pierre de Coubertin</button>
+            <button id="black" class="option">Elon Musk</button>
+            <button id="red" class="option">Arnold S. Bach</button>
         </div>
         <div>
-            <button id = "green" class="option">Ryan Saavedra</button>
-            <button id = "yellow" class="option">Elliot T. Bach</button>
+            <button id="green" class="option">Ryan Saavedra</button>
+            <button id="yellow" class="option">Elliot T. Bach</button>
         </div>
-        <p class = "correctex">
-            That's correct! Pierre de Coubertin is refered to as the father of the modern Olympic Games!</p>
-        <p class = "incorrectex">
-            That's incorrect! Pierre de Coubertin is refered to as the father of the modern Olympic Games!</p>
+        <p class="correctex">That's correct! Pierre de Coubertin is referred to as the father of the modern Olympic Games!</p>
+        <p class="incorrectex">That's incorrect! Pierre de Coubertin is referred to as the father of the modern Olympic Games!</p>
+        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
+        <button class="next-btn">Next</button> <!-- Next Button -->
+        <p class="learn-more" style="display:none;">Pierre de Coubertin was a French educator and historian best known for founding the 
+            modern Olympic Games. Born on January 1, 1863, in Paris, he believed in the importance of physical education and sports in 
+            promoting moral and social values. Coubertin was inspired by his visit to the ancient Olympic sites in Greece and the ideals 
+            of the classical games, leading him to advocate for the revival of the Olympics. In 1896, he organized the first modern Olympic
+             Games, establishing the International Olympic Committee (IOC) and promoting the Olympic motto, “Citius, Altius, Fortius” 
+             (Faster, Higher, Stronger). His vision was not just to create a sporting event but to foster international understanding and 
+             peace through athletics. Coubertin's dedication to the Olympic movement laid the groundwork for the Games as we know them today, 
+             emphasizing competition, camaraderie, and the spirit of sportsmanship. He continued to influence the Olympics until his death in 
+             1937, leaving a lasting legacy that endures in the modern world of sports.</p> <!-- Learn More Text -->
     </div>
 
 
 
+    <!-- Question 2 -->
     <div class="question" id="question2">
         <h2>Where were the first modern Olympic Games held?</h2>
         <div>
-            <button id = "blue" class="option">Atlanta</button>
-            <button id = "black" class="option">Moscow</button>
-            <button id = "red" class="option">Salt Lake City</button>
+            <button id="blue" class="option">Atlanta</button>
+            <button id="black" class="option">Moscow</button>
+            <button id="red" class="option">Salt Lake City</button>
         </div>
         <div>
-            <button id = "green" class="correct">Athens</button>
-            <button id = "yellow" class="option">Tokyo</button>
+            <button id="green" class="correct">Athens</button>
+            <button id="yellow" class="option">Tokyo</button>
         </div>
-        <p class = "correctex">
-            That's correct! Athens was the first city to host the modern Olympic Games</p>
-        <p class = "incorrectex">
-            That's incorrect! Athens was the first city to host the modern Olympic Games</p>
+        <p class="correctex">That's correct! Athens was the first city to host the modern Olympic Games.</p>
+        <p class="incorrectex">That's incorrect! Athens was the first city to host the modern Olympic Games.</p>
+        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
+        <button class="next-btn">Next</button> <!-- Next Button -->
+        <p class="learn-more" style="display:none;">The first modern Olympic Games were held in Athens, Greece, from April 6 to April 15, 1896. 
+            Organized by the International Olympic Committee (IOC), founded by Pierre de Coubertin, the event marked a revival of the ancient Olympic 
+            Games that took place in Olympia from 776 BC to 393 AD. About 280 athletes from 13 countries participated, including Greece, the 
+            United States, Germany, France, and Britain, with all competitors being male. The games featured 43 events across nine sports, such as 
+            athletics, swimming, cycling, fencing, gymnastics, weightlifting, wrestling, tennis, and shooting. The Panathenaic Stadium, renovated 
+            for the games, served as the main venue and could accommodate approximately 80,000 spectators. Winners received silver medals and olive 
+            branches, while second place earned bronze; gold medals were not introduced until the 1904 Games. The 1896 Olympics symbolized a return 
+            to the values of physical fitness, competition, and international camaraderie, setting the foundation for the modern Olympic movement 
+            and inspiring subsequent Olympiads.</p> <!-- Learn More Text -->
     </div>
 
 
 
 
+
+    <!-- Question 3 -->
     <div class="question" id="question3">
         <h2>Which year were the Olympic Games NOT canceled?</h2>
         <div>
-            <button id = "blue" class="option">1940</button>
-            <button id = "black" class="option">1916</button>
-            <button id = "red" class="correct">2020</button>
+            <button id="blue" class="option">1940</button>
+            <button id="black" class="option">1916</button>
+            <button id="red" class="correct">2020</button>
         </div>
         <div>
-            <button id = "green" class="option">1944</button>
-            <button id = "yellow" class="option">1999</button>
+            <button id="green" class="option">1944</button>
+            <button id="yellow" class="option">1999</button>
         </div>
-        <p class = "correctex">
-            That's correct! The 2020 Olympic Games were postponed to 2021, not canceled!</p>
-        <p class = "incorrectex">
-            That's incorrect! The 2020 Olympic Games were postponed to 2021, not canceled!</p>
+        <p class="correctex">That's correct! The 2020 Olympic Games were postponed to 2021, not canceled!</p>
+        <p class="incorrectex">That's incorrect! The 2020 Olympic Games were postponed to 2021, not canceled!</p>
+        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
+        <button class="next-btn">Next</button> <!-- Next Button -->
+        <p class="learn-more" style="display:none;">The Olympic Games have faced cancellations due to various circumstances 
+            throughout history. The most notable cancellations occurred during World War I and World War II. The 1916 Summer 
+            Olympics, scheduled to be held in Berlin, were canceled because of the ongoing conflict of World War I. Similarly, 
+            the 1940 Summer Olympics, initially planned for Tokyo, were first moved to Helsinki due to the war's outbreak, and 
+            ultimately canceled. The 1944 Summer Olympics, set to take place in London, were also called off due to the continued 
+            effects of World War II. The 2020 Tokyo Olympics faced a historic postponement, becoming the first Games to be delayed 
+            in peacetime, due to the global COVID-19 pandemic, eventually taking place in 2021 instead. Each of these cancellations 
+            reflects the impact of global events on the Olympic movement and the challenges faced in maintaining the Games' continuity.
+            There were no Olympic Games held in 1999 as that is not an Olympic year. </p> <!-- Learn More Text -->
     </div>
 
 
 
 
 
+    <!-- Question 4 -->
     <div class="question" id="question4">
         <h2>Which sport has Team USA never medaled in?</h2>
         <div>
-            <button id = "blue" class="option">Fencing</button>
-            <button id = "black" class="option">Athletics</button>
-            <button id = "red" class="option">Skateboarding</button>
+            <button id="blue" class="option">Fencing</button>
+            <button id="black" class="option">Athletics</button>
+            <button id="red" class="option">Skateboarding</button>
         </div>
         <div>
-            <button id = "green" class="correct">Rhythmic Gymnastics</button>
-            <button id = "yellow" class="option">Synchronized Swimming</button>
+            <button id="green" class="correct">Rhythmic Gymnastics</button>
+            <button id="yellow" class="option">Synchronized Swimming</button>
         </div>
-        <p class = "correctex">
-            That's correct! The United States has never medaled in rhythmic gymnastics.</p>
-        <p class = "incorrectex">
-            That's incorrect! The United States has never medaled in rhythmic gymnastics.</p>
+        <p class="correctex">That's correct! The United States has never medaled in rhythmic gymnastics.</p>
+        <p class="incorrectex">That's incorrect! The United States has never medaled in rhythmic gymnastics.</p>
+        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
+        <button class="next-btn">Next</button> <!-- Next Button -->
+        <p class="learn-more" style="display:none;">Team USA has participated in rhythmic gymnastics but has not medaled.</p> <!-- Learn More Text -->
     </div>
 
 
 
+
+
+    <!-- Question 5 -->
     <div class="question" id="question5">
         <h2>What do the Olympic Rings symbolize?</h2>
         <div>
-            <button id = "blue" class="option">The continents</button>
-            <button id = "black" class="correct">All of these!</button>
-            <button id = "red" class="option">Nationalities</button>
+            <button id="blue" class="option">The continents</button>
+            <button id="black" class="correct">All of these!</button>
+            <button id="red" class="option">Nationalities</button>
         </div>
         <div>
-            <button id = "green" class="option">Flag colors</button>
-            <button id = "yellow" class="option">Overall Unity</button>
+            <button id="green" class="option">Flag colors</button>
+            <button id="yellow" class="option">Overall Unity</button>
         </div>
-        <p class = "correctex">
-            That's correct! The Olympic rings symbolize the continents, the colors of all the 
-            flags in the world, their nations, and overall respect and unity of the world.</p>
-        <p class = "incorrectex">
-            That's incorrect! The Olympic Rings are a symbol of all the options above!</p>
+        <p class="correctex">That's correct! The Olympic rings symbolize the continents, the colors of all the flags in the world, their nations, and overall respect and unity of the world.</p>
+        <button class="learn-more-btn">Learn More</button> <!-- Learn More Button -->
+        <p class="incorrectex">That's incorrect! The Olympic Rings are a symbol of all the options above!</p>
+        <button class="next-btn">Next</button> <!-- Next Button -->
+        <p class="learn-more" style="display:none;">The Olympic Rings symbolize the five continents and the unity of the nations.</p> <!-- Learn More Text -->
     </div>
 
-    <div id="finish">Quiz Complete! Your score is <span class="score">0</span>.</div>
 
+
+
+
+    <!-- Finish Section -->
+    <div id="finish">
+        <p>Quiz Complete! Your score is <span class="score">0</span>.</p>
+    </div>
 
 </body>
 </html>

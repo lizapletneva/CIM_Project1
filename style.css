@@ -1,95 +1,194 @@
 body {
-    background-color: white;
+    background-color: rgb(211, 211, 211);
     text-align: center;
-    padding-top: 175px; 
-    margin: 50x;
+    margin: 0; 
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 35px;
 }
 
 .intro {
-    position: fixed; /* Keep it fixed at the top of the page */
-    top: 0; /* Align it at the top */
-    left: 0; /* Align it to the left of the page */
-    width: 100%; /* Scale to the full width of the webpage */
-    background-color: rgb(255, 207, 207); /* Background color */
-    text-align: center; /* Center the text horizontally */
-    height: 170px;
-    font-size: large;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: white; 
+    text-align: center; 
+    height: 200px; 
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
 }
+
+.question {
+    width: 75%; 
+    background-color: white; 
+    text-align: center; 
+    padding: 3%;
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
+    box-sizing: border-box; 
+    margin: 10% auto 20px; 
+    overflow: auto;
+}
+
+
+p{
+    font-size: 25px;
+}
+
 
 .image-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;    /* Center elements horizontally */
-    margin: 0 auto;         /* Center the whole container */
-    width: fit-content;     /* Shrink container to fit contents */
+    margin-top: 11%;
+    background-color: rgb(255, 255, 255);
+    display: flex; /* Use flexbox to center contents */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    overflow: hidden;
+    width: 100%; /* Full width */
+    height: 60%; /* Set a height for the container */
+    position: relative; /* Position relative for absolute child positioning */
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
 }
 
-.start-image {
-    height: 400px;
-    width: 700px;
-    outline: 5px black solid;
-    margin-bottom: 20px; /* Space between image and button */
+.image-slider {
+    display: flex; 
+    width: 100%; /* Full width times the number of images */
+    animation: slide 35s linear infinite; /* Adjust duration for a smoother transition */
 }
+
+.image-slider img {
+    width: 25%; /* Each image takes up 10% of the slider */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px; /* Space between images */
+    flex-shrink: 0; /* Prevent shrinking */
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 10px rgba(38, 91, 237, 0.8);
+
+}
+
+/* Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-400%); /* Move the slider left by 100% of its width */
+    }
+}
+
+
 
 #start-btn {
-    height: 50px;
-    width: 200px;
+    height: 100px;
+    width: 400px;
     cursor: pointer;
-    margin: 0; /* Remove extra margin */
+    margin: 2%; /* Remove extra margin */
     display: block; /* Ensure it behaves as a block element */
-    font-family:cursive;
-    background-color: pink;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    font-size: 40px;
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
+}
+
+.next-btn, .learn-more-btn{
+    height: 10%;
+    width: 20%;
+    cursor: pointer;
+    margin: 15px; /* Remove extra margin */
+    display: block; /* Ensure it behaves as a block element */
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
     border-radius: 50%;
+    font-size: 20px;
+}
+
+.next-btn{
+    border: 5px #4CAF50;
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px  #4CAF50;;
+}
+.learn-more-btn{
+    border: 5px #FF474C;
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px #FF474C;
 }
 
 
-div {
-    margin: 1px;
-    /*outline: 2px red solid;*/
-}
-
-.correctex {
+.correctex, .incorrectex, .learn-more {
     display: none;
+    padding: 1%;
+    size: 20;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
 }
 
-.incorrectex {
-    display: none;
-}
 
 #finish {
     display: none;
+    font-size: 40px;
+    background-color: rgb(190, 190, 255);
+    outline: 5px solid black;
+    padding:20px;
 }
 
 #blue, #black, #red, #yellow, #green {
     border: 10px solid;
     border-radius: 100%;
-    height: 175px;
-    width: 175px;
+    height: 250px; 
+    width: 250px;
     color: black;
     background-color: white;
     cursor: pointer;
     font-family: Georgia, 'Times New Roman', Times, serif;
     transition: transform 0.3s ease-in-out;
+    font-size: 25px;
 }
 
 #blue {
     border-color: rgb(0,129,200);
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px rgb(0,129,200);
 }
 
 #black {
-    border-color: rgb(0,0,0) ;
+    border-color: rgb(0,0,0);
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px rgb(0,0,0);
 }
 
 #red {
-    border-color:  rgb(238,51,78);
+    border-color: rgb(238,51,78);
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px rgb(238,51,78);
 }
 
 #yellow {
-    border-color:  rgb(252,177,49);
+    border-color: rgb(252,177,49);
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px rgb(253,177,49);
 }
 
 #green {
-    border-color:  rgb(0,166,81);
+    border-color: rgb(0,166,81);
+    outline: 5px solid transparent;
+    box-shadow: 0 0 15px 3px rgb(0,166,81);
 }
 
 #blue:hover, #black:hover, #red:hover, #yellow:hover, #green:hover {
@@ -100,4 +199,3 @@ div {
     transform: none !important; 
     cursor: no-drop;
 }
-
