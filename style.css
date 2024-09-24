@@ -9,18 +9,12 @@ body {
     flex-direction: column; 
 }
 
-h1{
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-}
 
 h2{
     font-size: 40px;
 }
 
-h3{
-    font-size: 35px;
-}
+
 
 .intro {
     position: fixed; 
@@ -29,13 +23,16 @@ h3{
     width: 100%; 
     background-color: white; 
     text-align: center; 
-    height: 20%; 
+    height: 18%; 
     outline: 5px solid transparent;
     box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
+    font-size: 100%;
+    margin-bottom: 50%;
 }
 
 .question {
     width: 75%; 
+    height: 75%;
     background-color: white; 
     text-align: center; 
     padding: 3%;
@@ -60,7 +57,7 @@ p{
     align-items: center; /* Center contents vertically */
     overflow: hidden;
     width: 100%; /* Full width */
-    height: 60%; /* Set a height for the container */
+    height: 50%; /* Set a height for the container */
     position: relative; /* Position relative for absolute child positioning */
     outline: 5px solid transparent;
     box-shadow: 0 0 15px 2px rgba(38, 91, 237, 0.8);
@@ -151,8 +148,8 @@ p{
 #blue, #black, #red, #yellow, #green {
     border: 10px solid;
     border-radius: 100%;
-    height: 250px; 
-    width: 250px;
+    height: 150px; 
+    width: 150px;
     color: black;
     background-color: white;
     cursor: pointer;
